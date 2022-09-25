@@ -32,21 +32,21 @@ class Scrabble
   -iterate through the characters,
     -replace the letter with the score
     -(not used) determine if the character is matched with those letters
-    -find which key contains that letter and return the value associated with key
+    -find which key contains that letter and
+      return the value associated with key
   -sum the array of scores
 
 -#score class method
   -accepts a str as the word to score
-  -
 
 =end
 
 class Scrabble
   LETTER_VALUES = { ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'] => 1,
-                    ['d', 'g'] => 2, ['b', 'c', 'm', 'p'] => 3, 
+                    ['d', 'g'] => 2, ['b', 'c', 'm', 'p'] => 3,
                     ['f', 'h', 'v', 'w', 'y'] => 4, ['k'] => 5,
                     ['j', 'x'] => 8, ['q', 'z'] => 10 }
-               
+
   def initialize(word_played)
     @word = word_played
   end
@@ -56,7 +56,7 @@ class Scrabble
   end
 
   def self.score(str)
-    return 0 if (str == nil) || !(str.match?(/[a-z]+/i))
+    return 0 if str.nil? || !(str.match?(/[a-z]+/i))
     str.chars.map { |char| find_letter_value(char.downcase) }.sum
   end
 

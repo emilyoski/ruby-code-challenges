@@ -5,9 +5,9 @@ Requirements:
   selects the correct sublist that contains the anagrams of the word
 
 Examples/Test Cases:
-For example, given the word "listen" and a list of candidates 
-  like "enlists", "google", "inlets", and "banana", 
-  the program should return a list containing "inlets". 
+For example, given the word "listen" and a list of candidates
+  like "enlists", "google", "inlets", and "banana",
+  the program should return a list containing "inlets".
 
 -no double letters of the sample word to create the anagram
 -return an empty array if there are no anagrams in the possible anagrams list
@@ -18,15 +18,15 @@ For example, given the word "listen" and a list of candidates
 -anagrams are case insensitive
 
 Data Structure:
-class Anagram 
+class Anagram
   -accepts a word as an argument
 
 #match instance method
 -must return an array object
--include proper anagram 
+-include proper anagram
   -case insensitive
   -use all letters exactly once
-  -cannot be the same word 
+  -cannot be the same word
 
 Algorithm:
 
@@ -59,7 +59,7 @@ class Anagram
   private
 
   def anagram?(str)
-    (@word.downcase != str.downcase) && 
-    (@word.downcase.chars.sort.join == str.downcase.chars.sort.join)
+    (@word.downcase != str.downcase) &&
+      (@word.downcase.chars.sort.join == str.downcase.chars.sort.join)
   end
 end

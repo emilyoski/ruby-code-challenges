@@ -6,9 +6,9 @@ Requirements(input/output):
 -Equilateral has all 3 sides of same length
 -Isosceles has 2 sides of same length
 -Scalene triangle has all sides of different lengths
--Must be a triangle 
+-Must be a triangle
   -all side lengths must be greater than 0
-  -sum of any 2 side lengths must be greater than the 
+  -sum of any 2 side lengths must be greater than the
   length of the 3rd side
 
 Examples/Test Cases:
@@ -16,7 +16,7 @@ Examples/Test Cases:
 -class of Triangle (input of side lengths, 3 arguments)
     -lengths will be entered in any order
     -input can be floats or integers
-- #kind instance method which returns the type of triangle 
+- #kind instance method which returns the type of triangle
     -returns the string in all lowercase of type of triangle
 -argument error will be raised if triangle doesn't exist
     -0 for the sides
@@ -29,7 +29,7 @@ class Triangle
   -state consisting of the 3 sides
   -kind instance method for returning the type
   -potentially a #triangle? to verify if its a triangle
-    inside the state and raise an error preventing you from creating the 
+    inside the state and raise an error preventing you from creating the
     triangle if its not possible
 
 Algorithm:
@@ -39,20 +39,20 @@ Algorithm:
   -if isosceles triangle, return isosceles
   -else then return scalene
 
-2) #triangle? instance method (if this is not true, 
+2) #triangle? instance method (if this is not true,
 need to raise an ArgumentError)
   -Verify all sides are greater than 0
-    -Iterate through the sides 
+    -Iterate through the sides
     -Verify each side is greater than 0
   -Verify sum of any 2 side lengths must be greater than the length
   of the 3rd side
     -side 1 + side 2 > side3
     -side 2 + side 3 > side1
     -side 3 + side 1 > side2
-    
+
   3) #equilateral? instance method
     -take the first side, verify all the sides are that side length
-  
+
   4) #isosceles? instance method
     -Iterate through the side lengths
     -If the count of the side length in the array is 2

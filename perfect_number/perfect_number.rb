@@ -56,20 +56,20 @@ classify class method:
 class PerfectNumber
   def self.classify(number)
     raise StandardError if number < 1
-    return 'perfect' if self.perfect_number?(number)
-    return 'abundant' if self.abundant_number?(number)
+    return 'perfect' if perfect_number?(number)
+    return 'abundant' if abundant_number?(number)
     'deficient'
   end
 
   def self.perfect_number?(value)
-    value == self.find_divisors(value).sum
+    value == find_divisors(value).sum
   end
 
   def self.abundant_number?(value)
-    value < self.find_divisors(value).sum
+    value < find_divisors(value).sum
   end
 
   def self.find_divisors(value)
-    (1...value).to_a.select { |num| value%num == 0 }
+    (1...value).to_a.select { |num| value % num == 0 }
   end
 end

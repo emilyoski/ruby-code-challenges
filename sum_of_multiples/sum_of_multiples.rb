@@ -15,22 +15,23 @@ Examples/Test Cases:
 
 -#to class method
   -accepts a number as an argument
-  -looking for multiples from 1 up to that natural number (allowed multiples of set given)
+  -looking for multiples from 1 up to that natural number
+    (allowed multiples of set given)
 
 -constructor/initialize with a set of numbers
   -arguments vary from 2-3, no set number of arguments
-  -set is given in the constructor 
+  -set is given in the constructor
 
 -#to instance method as well
-  -does the same thing as the class method 
+  -does the same thing as the class method
 
 Data Structure:
 
 class SumOfMultiples
-  
-#initalize method 
+
+#initalize method
   -accepts multiple arguments (*numbers)
-  -forms the set 
+  -forms the set
 
 #to class method
   -initialize an instance of the class
@@ -62,7 +63,7 @@ class SumOfMultiples
   end
 
   def self.to(upper_limit)
-    SumOfMultiples.new(3,5).to(upper_limit)
+    SumOfMultiples.new(3, 5).to(upper_limit)
   end
 
   def to(upper_limit)
@@ -71,7 +72,7 @@ class SumOfMultiples
     set.each do |set_num|
       multiple = set_num
 
-      while multiple < upper_limit do
+      while multiple < upper_limit
         all_multiples << multiple if (1...upper_limit).include?(multiple)
         multiple += set_num
       end
@@ -80,4 +81,3 @@ class SumOfMultiples
     all_multiples.uniq.sum
   end
 end
-

@@ -1,7 +1,7 @@
 =begin
 
 Requirements:
--convert an octal string to a decimal output 
+-convert an octal string to a decimal output
 -invalid input is considered the same as octal 0
 -don't use any built in or library methods that perform
   necessary conversions for you
@@ -11,11 +11,11 @@ Requirements:
 
 Examples/Test Cases:
 Decimal: 233
-         (2 * 10^2) + (3 * 10^1) + (3 * 10^0) 
+         (2 * 10^2) + (3 * 10^1) + (3 * 10^0)
          200        + 30         + 3          = 233
 
 Octal:  233
-        (2 * 8^2) + (3 * 8^1) + (3 * 8^0) 
+        (2 * 8^2) + (3 * 8^1) + (3 * 8^0)
         128       +  24       + 3            = 155
 
 converting from octal to decimal!
@@ -26,7 +26,7 @@ converting from octal to decimal!
   -invalid octal is 0 -> 0
   -may be all letters or include letters -> those are invalid
   -number starting with 0 is not invalid (011)
-  -octal 9, 6789, 8 are invalid? 
+  -octal 9, 6789, 8 are invalid?
   -octal numbers only utilize 0-7 (anything with 8 or 9 is invalid)
 
 Data Structure:
